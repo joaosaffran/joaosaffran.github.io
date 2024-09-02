@@ -92,13 +92,13 @@ footer {
     gap: 20px;
 }
 
-footer div {
+footer a {
     color: rgba(255, 255, 255, 0.5);
     transition: all;
     transition: 0.3s;
 }
 
-footer div:hover {
+footer a:hover {
     cursor: pointer;
     color: rgba(255, 255, 255, 1);
 }
@@ -155,7 +155,7 @@ li + li{
     margin-top: 24px;
 }
 
-a {
+a:not([class^="gg-"]) {
     text-decoration: none; /* no underline */
     color: rgba(255, 255, 255, 0.9);
 
@@ -172,7 +172,7 @@ a {
     transition: 0.3s;
 }
 
-a:hover {
+a:not([class^="gg-"]):hover {
     background: #7918F2;
     border: 1px solid rgba(255, 255, 255, 0.9);
     color: rgba(255, 255, 255, 1);
