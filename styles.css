@@ -1,0 +1,258 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Inter';
+}
+
+:root{
+    --footer-height: 80px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+
+}
+
+footer {
+    height: var(--footer-height);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    gap: 20px;
+}
+
+footer div {
+    color: rgba(255, 255, 255, 0.5);
+    transition: all;
+    transition: 0.3s;
+}
+
+footer div:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 1);
+}
+
+#aboutme {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#aboutme img{
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+}
+
+#aboutme h1 {
+    margin-top: 16px;
+
+    font-weight: bold;
+    font-size: xx-large;
+    color: white;
+}
+
+#aboutme p{
+    padding: 0 8px;
+    margin-top: 4px;
+
+    font-size: small;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.1rem;
+}
+
+#links {
+    height: calc(100% - var(--footer-height));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li + li{
+    margin-top: 24px;
+}
+
+a {
+    text-decoration: none; /* no underline */
+    color: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+
+    display: block;
+
+    text-align: center;
+    padding: 12px 16px;
+
+    border-radius: 50px;
+    transition: all;
+    transition: 0.3s;
+}
+
+a:hover {
+    background: #7918F2;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 1);
+}
+
+
+/* ICONS */
+
+.gg-mail,
+.gg-mail::after {
+  display: block;
+  box-sizing: border-box;
+  height: 14px;
+  border: 2px solid;
+}
+.gg-mail {
+  overflow: hidden;
+  transform: scale(var(--ggs, 1));
+  position: relative;
+  width: 18px;
+  border-radius: 2px;
+}
+.gg-mail::after {
+  content: "";
+  position: absolute;
+  border-radius: 3px;
+  width: 14px;
+  transform: rotate(-45deg);
+  bottom: 3px;
+  left: 0;
+}
+
+
+.gg-instagram {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+  }
+  .gg-instagram::after,
+  .gg-instagram::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+  }
+  .gg-instagram::after {
+    border: 2px solid;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 3px;
+  }
+  .gg-instagram::before {
+    border-radius: 3px;
+    width: 2px;
+    height: 2px;
+    background: currentColor;
+    right: 1px;
+    top: 1px;
+  }
+  
+  .gg-facebook {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 20px;
+    height: 20px;
+  }
+  .gg-facebook::after,
+  .gg-facebook::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+  }
+  .gg-facebook::before {
+    width: 8px;
+    height: 20px;
+    border-left: 4px solid;
+    border-top: 4px solid;
+    border-top-left-radius: 5px;
+    left: 6px;
+  }
+  .gg-facebook::after {
+    width: 10px;
+    height: 4px;
+    background: currentColor;
+    top: 7px;
+    left: 4px;
+    transform: skew(-5deg);
+  }
+  
