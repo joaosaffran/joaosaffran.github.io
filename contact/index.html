@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>contact form</h1>
+    <h3>Thanks for your contact, I will reply as soon as possible</h3>
+    <form action="contact/" method="post">
+        <label for="name">Name</label>
+        <input type="name" name="name" id="contact-name">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="contact-email">
+
+        <label for="msg">Message</label>
+        <textarea name="msg" id="contact-msg" rows="4" cols="50"></textarea>
+    
+        <button type="submit">Send Message</button>
+    </form>
 </body>
+
 </html>
