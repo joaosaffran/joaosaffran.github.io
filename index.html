@@ -6,41 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My personal website</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="./main.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
     </style>
 </head>
 
 <body>
+    <dialog id="my-diag" >
+        <p>create a new link</p>
+        <form id="form">
+            <div class="formfield">
+                <label for="url">Url</label>
+                <input type="url" name="url">
+            </div>
+            <div class="formfield">
+                <label for="title">Title</label>
+                <input type="text" name="title">
+            </div>
+            <button type="submit">Create Link</button>
+        </form>
+      </dialog>
     <main>
+        <button id="add-button" onclick="addNode()">
+            <div class="gg-math-plus"></div>
+        </button>
+
         <section>
             <div id="aboutme">
-                <img id="profile-pic" src="https://avatars.githubusercontent.com/u/126493771?v=4" alt="my profile picture">
+                <img id="profile-pic" src="https://avatars.githubusercontent.com/u/126493771?v=4"
+                    alt="my profile picture">
                 <h1>João Saffran</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur facilisis euismod. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur facilisis euismod.
                 </p>
             </div>
         </section>
         <section>
             <div id="links">
-                <ul>
-                    <li>
-                        <a href="https://www.google.com"">🔗 Random Link Content</a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.com"">🎉 Some other Link</a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.com">✏️ Check my blog</a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.com">🪄 The CSS Trick you missed</a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.com">🤯 JS god like mode</a>
-                    </li>
-                </ul>
+                <ul></ul>
             </div>
             <footer>
                 <a href="/contact" class="gg-mail"></a>
@@ -51,5 +55,12 @@
     </main>
 
 </body>
+
+<!-- TEMPLATES -->
+
+<li id="link-template" style="display: none;">
+    <button onclick="removeNode(this)">X</button>
+    <a href=""></a>
+</li>
 
 </html>
